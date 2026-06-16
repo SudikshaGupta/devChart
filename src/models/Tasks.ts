@@ -13,6 +13,18 @@ const TaskSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    status: {
+        type: String,
+        default: "todo",
+    },
+    assignedTo: {
+        type: String,
+        default: "",
+    },
+    dueDate: {
+        type: String,
+        default: "",
+    },
     completed: {
         type: Boolean,
         default: false,
@@ -22,7 +34,7 @@ const TaskSchema = new mongoose.Schema({
         default: Date.now,
     },
 });
-
-const Task = mongoose.models.Task || mongoose.model("Task", TaskSchema);
+const Task =
+    mongoose.models.Task || mongoose.model("Task", TaskSchema);
 
 export default Task;
