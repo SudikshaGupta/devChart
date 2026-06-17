@@ -41,31 +41,49 @@ const TaskCard = ({
             e.dataTransfer.setData("taskId", id);
         }
     }}
-    className={`w-72 rounded-xl p-3 mb-3 cursor-grab ${
+    className={`w-72 rounded-xl p-4 mb-4 cursor-grab shadow-lg hover:scale-105 transition-all duration-200 ${
     darkMode
 ? "bg-slate-800 text-white border border-slate-600"
         : bgClass
 }`}
 >
-            <h2 className="font-bold text-xl">
-                {title}
-            </h2>
-            <p className="mt-2">
-                {description}
-            </p>
-            <p className="mt-3">
-                 {priority}
-            </p>
-            {assignedTo && (
-                <p>
-                     {assignedTo}
-                </p>
-            )}
-            {dueDate && (
-                <p>
-                    {new Date(dueDate).toLocaleDateString()}
-                </p>
-            )}
+            <h2 className="font-bold text-xl mb-3">
+     {title}
+</h2>
+
+<p className="mb-2">
+    <span className="font-semibold">Description:</span> {description}
+</p>
+
+<p className="mb-2">
+    <span className="font-semibold">Priority: </span> 
+     <span
+        className={
+            darkMode
+                ? priority.toLowerCase() === "high"
+                    ? "text-red-400 font-bold"
+                    : priority.toLowerCase() === "medium"
+                    ? "text-yellow-300 font-bold"
+                    : "text-green-400 font-bold"
+                : ""
+        }
+    >
+        {priority}
+        </span>
+</p>
+
+{assignedTo && (
+    <p className="mb-2">
+        <span className="font-semibold">Assigned To:</span> {assignedTo}
+    </p>
+)}
+
+{dueDate && (
+    <p className="mb-2">
+        <span className="font-semibold">Due Date:</span>{" "}
+        {new Date(dueDate).toLocaleDateString()}
+    </p>
+)}
             <div className="flex justify-between mt-4">
 
     <Link

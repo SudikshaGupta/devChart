@@ -137,13 +137,18 @@ async function moveTask(id: string, status: string) {
     <div
     onDragOver={(e) => e.preventDefault()}
     onDrop={(e) => moveTask(e.dataTransfer.getData("taskId"), "todo")}
+    className={`rounded-2xl p-4 shadow-lg ${
+        darkMode
+            ? "bg-slate-700"
+            : "bg-red-100"
+    }`}
 >
-    <h2 className="text-3xl font-bold mb-4">
-        To Do ({todoTasks.length})
-    </h2>
-
-        {todoTasks.length === 0 ? (
-    <p className="text-gray-500 italic">
+    <h2 className="text-3xl font-bold text-center mb-6">
+    To Do ({todoTasks.length})
+</h2>
+<div className="flex flex-col items-center gap-4">
+       {todoTasks.length === 0 ? (
+    <p className="text-gray-500 italic text-center mt-10">
         No tasks here.
     </p>
 ) : (
@@ -163,16 +168,23 @@ async function moveTask(id: string, status: string) {
     ))
 )}
     </div>
+     </div>
 
     <div
      onDragOver={(e) => e.preventDefault()}
-    onDrop={(e) => moveTask(e.dataTransfer.getData("taskId"), "inprogress")}>
-        <h2 className="text-3xl font-bold mb-4">
+    onDrop={(e) => moveTask(e.dataTransfer.getData("taskId"), "inprogress")}
+    className={`rounded-2xl p-4 shadow-lg ${
+    darkMode
+        ? "bg-slate-700"
+        : "bg-blue-200"
+}`}>
+        <h2 className="text-3xl font-bold text-center mb-6">
         In Progress ({progressTasks.length})
         </h2>
+        <div className="flex flex-col items-center gap-4">
 
         {progressTasks.length === 0 ? (
-    <p className="text-gray-500 italic">
+    <p className="text-gray-500 italic text-center mt-10">
         No tasks here.
     </p>
 ) : (
@@ -192,17 +204,24 @@ async function moveTask(id: string, status: string) {
     ))
 )}
     </div>
+    </div>
 
     <div
      onDragOver={(e) => e.preventDefault()}
     onDrop={(e) => moveTask(e.dataTransfer.getData("taskId"), "done")}
+    className={`rounded-2xl p-4 shadow-lg ${
+    darkMode
+        ? "bg-slate-700"
+        : "bg-green-100"
+}`}
 >
-        <h2 className="text-3xl font-bold mb-4">
+        <h2 className="text-3xl font-bold text-center mb-6">
          Done ({doneTasks.length})
         </h2>
+         <div className="flex flex-col items-center gap-4">
 
         {doneTasks.length === 0 ? (
-    <p className="text-gray-500 italic">
+    <p className="text-gray-500 italic text-center mt-10">
         No tasks here.
     </p>
 ) : (
@@ -221,6 +240,7 @@ async function moveTask(id: string, status: string) {
         />
     ))
 )}
+    </div>
     </div>
 
 </div>

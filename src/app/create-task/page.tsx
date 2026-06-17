@@ -16,6 +16,7 @@ useEffect(() => {
     const saved = localStorage.getItem("darkMode");
 
     if (saved !== null) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setDarkMode(JSON.parse(saved));
     }
 }, []);
