@@ -118,13 +118,14 @@ The live application will be generated automatically.
 
 ### Dashboard
 
-<img width="959" height="504" alt="image" src="https://github.com/user-attachments/assets/5c469224-a3e5-46f6-8f8f-cb3be7b9bbde" />
-<img width="959" height="507" alt="image" src="https://github.com/user-attachments/assets/5c12b552-5f0d-4e5f-a58a-44ce97631c07" />
+<img width="959" height="505" alt="image" src="https://github.com/user-attachments/assets/3483ad41-1d77-4727-8634-7df63431f5a0" />
+
+<img width="959" height="508" alt="image" src="https://github.com/user-attachments/assets/19b088d3-11bb-4a7a-a293-a695480a5c9c" />
 
 
 ### Create Task Page
 
-<img width="959" height="508" alt="image" src="https://github.com/user-attachments/assets/bbeacd61-f6d8-47bc-9ffe-96bafae0e2e4" />
+<img width="959" height="506" alt="image" src="https://github.com/user-attachments/assets/8e210222-5803-4f76-87f8-5c2fc62d64d7" />
 
 ---
 
