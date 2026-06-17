@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# devChart
 
-## Getting Started
+devChart is a full-stack Task Management Web Application built using Next.js, TypeScript, Tailwind CSS, MongoDB Atlas, and Mongoose.
 
-First, run the development server:
+The application provides a Kanban-style dashboard where users can create, edit, delete, organize, and manage tasks efficiently.
+
+---
+
+## Features
+
+- Create new tasks
+- Edit existing tasks
+- Delete tasks
+- Assign tasks to team members
+- Set due dates
+- Priority levels (High, Medium, Low)
+- Kanban dashboard with three stages:
+  - To Do
+  - In Progress
+  - Done
+- Drag and drop task movement
+- Dark mode support
+- Sort tasks by priority
+- MongoDB Atlas integration
+- Responsive user interface
+
+---
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- MongoDB Atlas
+- Mongoose
+- Vercel
+
+---
+
+## Project Structure
+
+```
+src/
+│
+├── app/
+│   ├── dashboard/
+│   ├── create-task/
+│   ├── edit-task/
+│   └── api/
+│
+├── components/
+│   ├── Navbar.tsx
+│   └── TaskCard.tsx
+│
+├── models/
+│   └── Tasks.ts
+│
+└── lib/
+```
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/SudikshaGupta/devChart.git
+```
+
+Move into the project directory:
+
+```bash
+cd devChart
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env.local` file:
+
+```env
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the application at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Usage
 
-To learn more about Next.js, take a look at the following resources:
+- Create tasks with title, description, priority, assignee, and due date.
+- Move tasks between "To Do", "In Progress", and "Done" using drag and drop.
+- Edit or delete tasks whenever required.
+- Sort tasks based on priority.
+- Switch between light and dark mode.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Live Demo
 
-## Deploy on Vercel
+https://dev-chart-theta.vercel.app/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## GitHub Repository
+
+https://github.com/SudikshaGupta/devChart
+
+---
+
+## Author
+
+Sudiksha Gupta
+
+This project was developed as a Full Stack Web Development project using Next.js and MongoDB Atlas.
